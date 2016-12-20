@@ -14,7 +14,7 @@ defmodule ProyectoDeElixir.Mixfile do
   #
   # Type "mix help compile.app" for more information
   def application do
-    [applications: [:logger, :httpoison]]
+    [applications: [:logger, :httpoison, :cowboy, :plug]]
   end
 
   # Dependencies can be Hex packages:
@@ -27,6 +27,10 @@ defmodule ProyectoDeElixir.Mixfile do
   #
   # Type "mix help deps" for more examples and options
   defp deps do
-    [{:httpoison, "~> 0.10.0"}]
+    [
+      {:httpoison, "~> 0.10.0"},
+      {:plug, "~> 1.3.0"},
+      {:cowboy, "~> 1.0.0"}
+    ]
   end
 end
